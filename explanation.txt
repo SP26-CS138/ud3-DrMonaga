@@ -1,0 +1,1 @@
+I used a list over a dictionary because with a scorecard the values and the amount of values is constantly changing so a list would be ideal so I can change the values much easier than using a dicitonary. 
