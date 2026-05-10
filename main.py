@@ -24,19 +24,20 @@ INPUT_FILE = "input_file.txt"
 ##########################################
 # <replace this line with function definitions, each needs a description>
 def write_scorecard(scores):
+    '''Writes the list of golf scores stored in the list thats passed through into a text file.'''
     file = open(INPUT_FILE, "w")
     for score in scores:
         file.write(str(score) + " ")
     file.close()
 
 def show_scorecard():
+    '''Reads file and puts all the stored scores into a list. Then prints out the hole number and its assosiated score'''
     print("===== SCORECARD =====")
     hole = 1
     file = open(INPUT_FILE, "r")
     scores = file.read()
     split_scores = scores.split()
     for hole_number in split_scores:
-        stroke_number = int(hole)
         print(f"Hole {hole}: {hole_number} strokes")
         hole = hole + 1
     file.close()
